@@ -5,9 +5,9 @@ import PostCard from './PostCard';
 export default class Feed extends React.Component{
 
 
-    renderItem = ({ item: post }) => {
-        return <PostCard post={post} />;
-      };
+  renderItem = ({ item: post }) => {
+    return <PostCard post={post} navigation={this.props.navigation} />;
+  };
 
       keyExtractor = (item, index) => index.toString();
 
